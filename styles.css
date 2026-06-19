@@ -1,0 +1,90 @@
+:root {
+  --bg: #0d1018;
+  --card: #161b27;
+  --ink: #f4f6fb;
+  --muted: #9aa6bd;
+  --line: rgba(255, 255, 255, 0.10);
+  --green: #2bb45a;
+  --blue: #2f8cf2;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 22px 64px; }
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+header.site .logo { font-size: 30px; }
+header.site .name { font-weight: 800; font-size: 20px; letter-spacing: 0.2px; }
+header.site nav { margin-left: auto; display: flex; gap: 18px; }
+header.site nav a { color: var(--muted); font-weight: 600; font-size: 15px; }
+header.site nav a:hover { color: var(--ink); text-decoration: none; }
+
+h1 { font-size: 30px; line-height: 1.2; margin: 8px 0 4px; }
+h2 { font-size: 20px; margin: 34px 0 10px; }
+.lede { color: var(--muted); font-size: 17px; }
+.updated { color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin: 18px 0;
+}
+
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+
+.hero {
+  text-align: center;
+  padding: 48px 0 8px;
+}
+.hero .big { font-size: 64px; }
+.hero h1 { font-size: 40px; margin: 10px 0 6px; }
+.pill {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 28px;
+  margin-top: 16px;
+}
+.pill:hover { text-decoration: none; opacity: 0.92; }
+
+.modes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+.modes .m { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.modes .m b { display: block; }
+.modes .m span { color: var(--muted); font-size: 14px; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  padding: 26px 22px 40px;
+}
+
+@media (max-width: 520px) {
+  .modes { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+}
